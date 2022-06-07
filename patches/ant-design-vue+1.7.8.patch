@@ -1,0 +1,13 @@
+diff --git a/node_modules/ant-design-vue/es/button/button.js b/node_modules/ant-design-vue/es/button/button.js
+index 77a58b9..ff73d6a 100644
+--- a/node_modules/ant-design-vue/es/button/button.js
++++ b/node_modules/ant-design-vue/es/button/button.js
+@@ -36,7 +36,7 @@ export default {
+       var _ref;
+ 
+       var customizePrefixCls = this.prefixCls,
+-          type = this.type,
++          type = 'danger',
+           shape = this.shape,
+           size = this.size,
+           hasTwoCNChar = this.hasTwoCNChar,
