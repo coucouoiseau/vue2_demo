@@ -38,7 +38,13 @@ const routes = [
     path: '/taskQueue',
     name: 'TaskQueue',
     component: () => import('../views/taskQueue')
-  }
+  },
+  {
+    path: '/richEditor',
+    name: 'RichEditor',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/richEditor')
+  },
 ]
 
 const router = new VueRouter({

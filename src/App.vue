@@ -6,6 +6,7 @@
 		<button @click="$router.push('/indexedDB')">indexedDB</button>
 		<button @click="$router.push('/elementTableFlxed')">elementTableFlxed</button>
 		<button @click="$router.push('/taskQueue')">taskQueue</button>
+		<button @click="$router.push('/richEditor')">richEditor</button>
 		<router-view></router-view>
 	</div>
 </template>

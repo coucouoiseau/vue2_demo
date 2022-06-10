@@ -8,6 +8,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@tinymce/tinymce-vue": "^3.2.8",
     "ant-design-vue": "^1.7.8",
     "core-js": "^3.6.5",
     "echarts": "^4.7.0",
@@ -26,6 +27,7 @@
     "patch-package": "^6.4.7",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "tinymce": "^5.7.0",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
