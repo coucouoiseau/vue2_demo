@@ -45,6 +45,30 @@ const routes = [
     // component: () => import('../components/tinymce-comp')
     component: () => import('../views/richEditor')
   },
+  {
+    path: '/icon',
+    name: 'Icon',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/icon')
+  },
+  {
+    path: '/tableTree',
+    name: 'TableTree',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/tableTree')
+  },
+  {
+    path: '/threeJS',
+    name: 'ThreeJS',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/threeJS')
+  },
+  {
+    path: '/popperDemo',
+    name: 'PopperDemo',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/popperDemo')
+  },
 ]
 
 const router = new VueRouter({

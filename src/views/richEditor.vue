@@ -1,5 +1,8 @@
 <template>
-	<editor id="tinymce" v-model="tinymceHtml" :init="einit"></editor>
+	<div>
+		<editor id="tinymce" v-model="tinymceHtml" :init="einit"></editor>
+		<div style="width: 100px;height: 100px;" class="ceshiRe"></div>
+	</div>
 </template>
 
 <script>
@@ -14,9 +17,10 @@ import "tinymce/icons/default"; //富文本样式
 import "tinymce/themes/silver/theme.min.js"; //引入富文本的主要脚本
 
 export default {
-	components: { Editor },
-	data(){
-		return{
+	components: {Editor},
+	data() {
+		return {
+			theme: 'dark',
 			einit: {
 				skin_url: require("@/assets/tinymce/skins/ui/oxide/skin.min.css"),
 				language_url: require("@/assets/tinymce/langs/zh-Hans.js"),
