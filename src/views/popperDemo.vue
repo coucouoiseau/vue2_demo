@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import './ceshi.js'
 export default {
 	name: "popperDemo",
 	data() {
@@ -46,6 +47,9 @@ export default {
 			cale1: false,
 			cale2: false,
 		}
+	},
+	mounted() {
+		console.log(a)
 	},
 	methods: {
 		setCale(v) {

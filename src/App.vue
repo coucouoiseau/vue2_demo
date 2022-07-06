@@ -11,6 +11,7 @@
 		<button @click="$router.push('/tableTree')">tableTree</button>
 		<button @click="$router.push('/threeJS')">threeJS</button>
 		<button @click="$router.push('/popperDemo')">popperDemo</button>
+		<button @click="$router.push('/draggableDemo')">draggableDemo</button>
 		<router-view></router-view>
 	</div>
 </template>
