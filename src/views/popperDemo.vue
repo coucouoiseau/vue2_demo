@@ -83,13 +83,13 @@ export default {
 	margin: 100px;
 }
 
-.cale1 {
-	transform: scale(0.7);
-	transform-origin: top left;
-}
+/*.cale1 {*/
+/*	transform: scale(0.7);*/
+/*	transform-origin: top left;*/
+/*}*/
 
-.cale2 {
-	transform: scale(1.5);
-	transform-origin: top left;
-}
+/*.cale2 {*/
+/*	transform: scale(1.5);*/
+/*	transform-origin: top left;*/
+/*}*/
 </style>
