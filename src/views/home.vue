@@ -4,6 +4,23 @@
 		<a-button @click="screenClick('myScreen')">页面全屏</a-button>
 		<button @click="arrProxy.push(11)">添加</button>
 
+		<a-pagination
+			v-model="current"
+			:page-size-options="pageSizeOptions"
+			:total="total"
+			show-size-changer
+			:page-size="pageSize"
+			:itemRender="itemRender"
+		>
+<!--			<template slot="buildOptionText" slot-scope="props">-->
+<!--				<span v-if="props.value !== '50'">{{ props.value }}条/页</span>-->
+<!--				<span v-if="props.value === '50'">全部</span>-->
+<!--			</template>-->
+			<template slot="selectComponentClass" slot-scope="props">
+				<text>props</text>
+				<a-icon slot="suffixIcon" type="smile" />
+			</template>
+		</a-pagination>
 		<a-table
 			:columns='columnsParent'
 			:data-source='data'
@@ -110,6 +127,14 @@ function createTaskQueueProxy(arr) {
 export default {
 	data() {
 		return {
+			pageSizeOptions: ['10', '20', '30', '40', '50'],
+			current: 1,
+			pageSize: 10,
+			total: 50,
+			itemRender:(current, type, originalElement) => {
+				console.log(originalElement)
+				return originalElement
+			},
 			data: [
 				{
 					key: 1,
@@ -194,6 +219,11 @@ export default {
 			arrProxy: null
 		};
 	},
+	created(vm) {
+		console.log(1111111)
+		console.log(vm)
+		console.log(this)
+	},
 	mounted() {
 		this.arrProxy = createTaskQueueProxy(this.arr)
 	},
@@ -261,4 +291,5 @@ body {
 	height: 100%;
 	background-color: #71BCE1;
 }
+
 </style>

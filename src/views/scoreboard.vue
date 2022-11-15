@@ -18,8 +18,8 @@ export default {
 	components: {countFlop},
 	data() {
 		return {
-			val: 0,
-			valTemp:0
+			val: {a:111},
+			valTemp:10
 		}
 	},
 	methods:{

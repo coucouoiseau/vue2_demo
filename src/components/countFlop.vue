@@ -1,11 +1,11 @@
 <template>
 	<div class="count-flop" :key="compKey">
-		<div :class="item!='.'?'count-flop-box':'count-flop-point'" v-for="(item, index) in value" :key="index">
-			<div v-if="item!='.'" class="count-flop-content" :class="['rolling_' + valueTemp[index] + '_' + item]">
-				<div v-for="(item2,index2) in numberList" :key="index2" class="count-flop-num">{{ item2 }}</div>
-			</div>
-			<div v-else class="count-flop-content">.</div>
-		</div>
+<!--		<div :class="item!='.'?'count-flop-box':'count-flop-point'" v-for="(item, index) in value" :key="index">-->
+<!--			<div v-if="item!='.'" class="count-flop-content" :class="['rolling_' + valueTemp[index] + '_' + item]">-->
+<!--				<div v-for="(item2,index2) in numberList" :key="index2" class="count-flop-num">{{ item2 }}</div>-->
+<!--			</div>-->
+<!--			<div v-else class="count-flop-content">.</div>-->
+<!--		</div>-->
 	</div>
 </template>
 
@@ -20,9 +20,23 @@ export default {
 			compKey: 0
 		};
 	},
-	props: ["val"],
+	props:{
+		val:{
+			type: Object,
+			default: ()=>{
+				return {}
+			}
+		}
+	},
 	watch: {
-		val() {
+		val:{
+			immediate:true,
+			handler(val){
+				console.log(val)
+			}
+		}
+		/*valCeshi(newVal,oldVal) {
+			console.log(newVal,oldVal)
 			this.valueTemp = JSON.parse(JSON.stringify(this.value));
 			this.value = this.val.toString().split("");
 			let lengthGap = Math.abs(this.valueTemp.length - this.value.length)
@@ -40,13 +54,12 @@ export default {
 					i++
 				}
 			}
-
 			this.compKey += 1;
-		}
+		},*/
 	},
-	created() {
-		this.value = this.val.toString().split("");
-		this.valueTemp = this.val.toString().split("").map(()=>0);
+	created(vm) {
+		// this.value = this.val.toString().split("");
+		// this.valueTemp = this.val.toString().split("").map(()=>0);
 	},
 };
 </script>

@@ -2,7 +2,7 @@ const webpack = require("webpack");
 module.exports = {
 	publicPath: '/',
 	// 如果您不需要生产时的源映射，那么将此设置为false可以加速生产构建
-	productionSourceMap: false,
+	// productionSourceMap: false,
 	configureWebpack: config => {
 		if (process.env.NODE_ENV === 'production') {
 			// 生产环境

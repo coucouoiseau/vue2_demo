@@ -75,6 +75,18 @@ const routes = [
     // component: () => import('../components/tinymce-comp')
     component: () => import('../views/draggableDemo')
   },
+  {
+    path: '/videoList',
+    name: 'VideoList',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/videoList')
+  },
+  {
+    path: '/article',
+    name: 'article',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/article')
+  },
 ]
 
 const router = new VueRouter({

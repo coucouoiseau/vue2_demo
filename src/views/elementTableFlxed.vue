@@ -1,6 +1,10 @@
 <template>
-	<div class="elementTableFlxed" v-loading="loading">
-		<el-button @click="addData">增加数据</el-button>
+	<div class="elementTableFlxed" @click="zuzhiguanbi" v-loading="loading">
+		<el-select v-model="form.region" placeholder="请选择活动区域" @blur="ceshi">
+			<el-option label="区域一" value="shanghai"></el-option>
+			<el-option label="区域二" value="beijing"></el-option>
+		</el-select>
+<!--		<el-button @click="addData">增加数据</el-button>
 		<el-button @click="doLayout">doLayout</el-button>
 		<el-table
 			:data="tableData"
@@ -32,14 +36,15 @@
 				<el-input v-model="form.name"></el-input>
 			</el-form-item>
 			<el-form-item label="活动区域">
-				<el-select v-model="form.region" placeholder="请选择活动区域">
+				<el-select v-model="form.region" placeholder="请选择活动区域" @blur="ceshi">
 					<el-option label="区域一" value="shanghai"></el-option>
 					<el-option label="区域二" value="beijing"></el-option>
 				</el-select>
 			</el-form-item>
 			<el-form-item label="活动时间">
 				<el-col :span="11">
-					<el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
+					<el-date-picker type="date" placeholder="选择日期" v-model="form.date1"
+					                style="width: 100%;"></el-date-picker>
 				</el-col>
 				<el-col class="line" :span="2">-</el-col>
 				<el-col :span="11">
@@ -80,10 +85,10 @@
 			:before-close="handleClose">
 			<el-radio label="线上品牌商赞助"></el-radio>
 			<span slot="footer" class="dialog-footer">
-    <el-button @click="dialogVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-  </span>
-		</el-dialog>
+				<el-button @click="dialogVisible = false">取 消</el-button>
+				<el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+			</span>
+		</el-dialog>-->
 	</div>
 </template>
 
@@ -336,12 +341,19 @@ export default {
 		this.init()
 	},
 	methods: {
+		ceshi(){
+			console.log(111)
+		},
+		zuzhiguanbi(){
+			console.log(2222)
+		},
 		handleClose(done) {
 			this.$confirm('确认关闭？')
 				.then(_ => {
 					done();
 				})
-				.catch(_ => {});
+				.catch(_ => {
+				});
 		},
 		init() {
 			this.addData()
@@ -371,11 +383,12 @@ export default {
 </script>
 
 <style scoped>
+
 .elementTableFlxed /deep/ .el-loading-mask {
-	background-color: #fff;
+	background-color: #FFF;
 }
 
-::v-deep .el-radio__label{
-	font-size: 20px ;
+::v-deep .el-radio__label {
+	font-size: 20px;
 }
 </style>

@@ -12,6 +12,8 @@
 		<button @click="$router.push('/threeJS')">threeJS</button>
 		<button @click="$router.push('/popperDemo')">popperDemo</button>
 		<button @click="$router.push('/draggableDemo')">draggableDemo</button>
+		<button @click="$router.push('/videoList')">videoList</button>
+		<button @click="$router.push('/article')">article</button>
 		<router-view></router-view>
 	</div>
 </template>
@@ -20,5 +22,7 @@
 </script>
 
 <style scoped>
-
+button{
+	margin: 5px;
+}
 </style>
