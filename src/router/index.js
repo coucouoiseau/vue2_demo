@@ -87,6 +87,24 @@ const routes = [
     // component: () => import('../components/tinymce-comp')
     component: () => import('../views/article')
   },
+  {
+    path: '/eltableFixed',
+    name: 'eltableFixed',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/eltableFixed')
+  },
+  {
+    path: '/dhtmlxGantt',
+    name: 'dhtmlxGantt',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/dhtmlxGantt')
+  },
+  {
+    path: '/highchartsGantt',
+    name: 'highchartsGantt',
+    // component: () => import('../components/tinymce-comp')
+    component: () => import('../views/highchartsGantt')
+  },
 ]
 
 const router = new VueRouter({

@@ -14,6 +14,9 @@
 		<button @click="$router.push('/draggableDemo')">draggableDemo</button>
 		<button @click="$router.push('/videoList')">videoList</button>
 		<button @click="$router.push('/article')">article</button>
+		<button @click="$router.push('/eltableFixed')">eltableFixed</button>
+		<button @click="$router.push('/dhtmlxGantt')">dhtmlxGantt</button>
+		<button @click="$router.push('/highchartsGantt')">highchartsGantt</button>
 		<router-view></router-view>
 	</div>
 </template>
